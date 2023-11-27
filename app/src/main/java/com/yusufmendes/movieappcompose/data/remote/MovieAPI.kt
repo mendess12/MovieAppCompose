@@ -10,13 +10,13 @@ interface MovieAPI {
 
     @GET(".")
     suspend fun getMovies(
-        @Query("s") searchString: String,
+        @Query("s") search: String,
         @Query("apikey") apiKey: String = API_KEY
     ): MoviesDto
 
     @GET(".")
     suspend fun getMovieDetail(
-        @Query("İ") imdbId: String,
+        @Query("i") imdbId: String,
         @Query("apikey") apiKey: String = API_KEY
     ): MovieDetailDto
 }
