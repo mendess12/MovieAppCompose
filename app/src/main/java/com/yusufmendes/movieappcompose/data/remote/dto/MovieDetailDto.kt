@@ -1,6 +1,7 @@
 package com.yusufmendes.movieappcompose.data.remote.dto
 
 import com.google.gson.annotations.SerializedName
+import com.yusufmendes.movieappcompose.domain.model.MovieDetail
 
 data class MovieDetailDto(
     @SerializedName("Actors")
@@ -51,3 +52,21 @@ data class MovieDetailDto(
     val imdbRating: String,
     val imdbVotes: String
 )
+
+fun MovieDetailDto.toMovieDetail(): MovieDetail {
+    return MovieDetail(
+        actors,
+        awards,
+        country,
+        director,
+        genre,
+        language,
+        poster,
+        rated,
+        released,
+        title,
+        type,
+        year,
+        imdbRating
+    )
+}
