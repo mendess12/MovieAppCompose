@@ -1,4 +1,4 @@
-package com.yusufmendes.movieappcompose
+package com.yusufmendes.movieappcompose.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,8 +7,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.yusufmendes.movieappcompose.ui.theme.MovieAppComposeTheme
+import com.yusufmendes.movieappcompose.presentation.ui.theme.MovieAppComposeTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
