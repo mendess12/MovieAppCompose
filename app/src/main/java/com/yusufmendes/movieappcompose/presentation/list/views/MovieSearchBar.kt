@@ -55,7 +55,7 @@ fun MovieSearchBar(
                 .fillMaxWidth()
                 .shadow(5.dp, CircleShape)
                 .background(Color.White, CircleShape)
-                .padding(20.dp)
+                .padding(horizontal = 20.dp)
                 .onFocusChanged {
                     isHintDisplayed = it.isFocused != true && text.isEmpty()
                 }
