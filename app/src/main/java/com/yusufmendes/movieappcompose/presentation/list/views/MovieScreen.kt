@@ -14,6 +14,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.yusufmendes.movieappcompose.presentation.Screen
 import com.yusufmendes.movieappcompose.presentation.list.MoviesEvent
 import com.yusufmendes.movieappcompose.presentation.list.MoviesListViewModel
 
@@ -40,7 +41,7 @@ fun MovieScreen(
             LazyColumn(modifier = Modifier.fillMaxSize()) {
                 items(state.movies) { movie ->
                     MovieListRow(movie = movie, onItemClick = {
-                        //navController.navigate(Screen.MovieDetailScreen.route + "id")
+                        navController.navigate(Screen.MovieDetailScreen.route + "/${movie.imdbID}")
                     })
                 }
             }
